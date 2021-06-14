@@ -1,0 +1,18 @@
+PODS:
+  - XCTest-Gherkin/Core (0.21.2)
+  - XCTest-Gherkin/Native (0.21.2):
+    - XCTest-Gherkin/Core
+
+DEPENDENCIES:
+  - XCTest-Gherkin/Native
+
+SPEC REPOS:
+  trunk:
+    - XCTest-Gherkin
+
+SPEC CHECKSUMS:
+  XCTest-Gherkin: 7c78531780d520bbec90b035077b0bf9fc178717
+
+PODFILE CHECKSUM: eff1448e9cd014222d1d3025e81a6659af5308a0
+
+COCOAPODS: 1.10.0
