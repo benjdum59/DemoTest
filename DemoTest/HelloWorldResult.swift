@@ -8,9 +8,7 @@
 import Foundation
 
 struct HelloWorldResult {
-    
-    var yop = false
-    
+        
     let string: String?
     
     init(_ string: String?) {
