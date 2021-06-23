@@ -16,6 +16,6 @@ struct HelloWorldResult {
     }
     
     var result: String {
-        "Hello \(self.string ?? "World")!"
+        "Hello \(string ?? "World")!"
     }
 }
