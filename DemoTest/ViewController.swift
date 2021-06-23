@@ -73,13 +73,17 @@ class ViewController: UIViewController {
     }
     
     private func updateBorder(view: UIView) {
-        view.layer.borderColor = UIColor.black.cgColor
-        view.layer.borderWidth = 5
+        UIView.transition(with: view, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                view.layer.borderColor = UIColor.black.cgColor
+                view.layer.borderWidth = 5
+        }, completion: nil)
     }
     
     private func removeBorder(views: [UIView]) {
         views.forEach { view in
-            view.layer.borderWidth = 0
+            UIView.transition(with: view, duration: 0.3, options: .transitionCrossDissolve, animations: {
+                    view.layer.borderWidth = 0
+            }, completion: nil)
         }
     }
     
