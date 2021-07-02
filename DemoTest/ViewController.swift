@@ -64,6 +64,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initCornerRadius()
+        color1 = .red
+        color2 = .red
     }
     
     private func initCornerRadius() {
