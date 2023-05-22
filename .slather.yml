@@ -3,7 +3,7 @@ xcodeproj: DemoTest.xcodeproj
 workspace: DemoTest.xcworkspace
 scheme: DemoTest
 source_directory: DemoTest
-output_directory: report-output-dir/cobertura.xml
+output_directory: report-output-dir/
 ignore:
   - ViewController.swift
   - AppDelegate.swift
