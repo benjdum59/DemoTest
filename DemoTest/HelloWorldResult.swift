@@ -8,13 +8,12 @@
 import Foundation
 
 struct HelloWorldResult {
-        
     let string: String?
-    
+
     init(_ string: String?) {
         self.string = string
     }
-    
+
     var result: String {
         "Hello \(string ?? "World")!"
     }

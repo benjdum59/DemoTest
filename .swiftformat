@@ -1,0 +1,10 @@
+# format options
+## --allman true
+
+# file options
+--exclude Pods
+--exclude DerivedData
+
+# rules
+--enable elseOnSameLine
+--disable wrapMultilineStatementBraces,trailingCommas,braces

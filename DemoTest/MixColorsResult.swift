@@ -11,7 +11,7 @@ enum PrimaryColorResult {
     case red
     case blue
     case yellow
-    
+
     var color: UIColor {
         switch self {
         case .red:
@@ -24,12 +24,10 @@ enum PrimaryColorResult {
     }
 }
 
-
 struct MixColorsResult {
-    
     func mixColors(_ color1: PrimaryColorResult, _ color2: PrimaryColorResult) -> UIColor {
         switch (color1, color2) {
-        case (let x, let y) where x == y:
+        case let (x, y) where x == y:
             return x.color
         case (.red, .blue), (.blue, .red):
             return UIColor.purple

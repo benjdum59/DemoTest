@@ -8,7 +8,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     @IBOutlet private var resultView: UIView!
     @IBOutlet private var redViewFirstLine: UIView!
     @IBOutlet private var blueViewFirstLine: UIView!
@@ -16,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet private var redViewSecondLine: UIView!
     @IBOutlet private var blueViewSecondLine: UIView!
     @IBOutlet private var yellowViewSecondLine: UIView!
-    
+
     lazy var allViews = [resultView,
                          redViewFirstLine,
                          blueViewFirstLine,
@@ -24,7 +23,7 @@ class ViewController: UIViewController {
                          redViewSecondLine,
                          blueViewSecondLine,
                          yellowViewSecondLine]
-    
+
     private var color1: PrimaryColorResult? {
         didSet {
             guard let color = color1 else {
@@ -42,7 +41,7 @@ class ViewController: UIViewController {
             showResult()
         }
     }
-    
+
     private var color2: PrimaryColorResult? {
         didSet {
             guard let color = color2 else {
@@ -60,35 +59,35 @@ class ViewController: UIViewController {
             showResult()
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         initCornerRadius()
         color1 = .red
         color2 = .red
     }
-    
+
     private func initCornerRadius() {
         allViews.forEach { view in
             view?.layer.cornerRadius = 20
         }
     }
-    
+
     private func updateBorder(view: UIView) {
         UIView.transition(with: view, duration: 0.3, options: .transitionCrossDissolve, animations: {
-                view.layer.borderColor = UIColor.black.cgColor
-                view.layer.borderWidth = 5
+            view.layer.borderColor = UIColor.black.cgColor
+            view.layer.borderWidth = 5
         }, completion: nil)
     }
-    
+
     private func removeBorder(views: [UIView]) {
         views.forEach { view in
             UIView.transition(with: view, duration: 0.3, options: .transitionCrossDissolve, animations: {
-                    view.layer.borderWidth = 0
+                view.layer.borderWidth = 0
             }, completion: nil)
         }
     }
-    
+
     private func showResult() {
         guard let color1 = color1,
               let color2 = color2 else {
@@ -97,29 +96,27 @@ class ViewController: UIViewController {
         resultView.backgroundColor = MixColorsResult().mixColors(color1, color2)
     }
 
-    @IBAction private func firstColorRedPressed(_ sender: UIButton) {
+    @IBAction private func firstColorRedPressed(_: UIButton) {
         color1 = .red
     }
-    
-    @IBAction private func firstColorBluePressed(_ sender: UIButton) {
+
+    @IBAction private func firstColorBluePressed(_: UIButton) {
         color1 = .blue
     }
-    
-    @IBAction private func firstColorYellowPressed(_ sender: UIButton) {
+
+    @IBAction private func firstColorYellowPressed(_: UIButton) {
         color1 = .yellow
     }
-    
-    @IBAction private func secondColorRedPressed(_ sender: UIButton) {
+
+    @IBAction private func secondColorRedPressed(_: UIButton) {
         color2 = .red
     }
-    
-    @IBAction private func secondColorBluePressed(_ sender: UIButton) {
+
+    @IBAction private func secondColorBluePressed(_: UIButton) {
         color2 = .blue
     }
-    
-    @IBAction private func secondColorYellowPressed(_ sender: UIButton) {
+
+    @IBAction private func secondColorYellowPressed(_: UIButton) {
         color2 = .yellow
     }
-    
 }
-
