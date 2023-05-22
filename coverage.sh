@@ -18,5 +18,7 @@ git push origin master
 
 commit=`git rev-parse HEAD`
 
+echo "bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Swift --force-language -r report-output-dir/cobertura.xml --commit-uuid $commit"
+
 bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Swift --force-language -r report-output-dir/cobertura.xml --commit-uuid $commit
 
