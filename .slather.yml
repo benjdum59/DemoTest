@@ -8,3 +8,6 @@ ignore:
   - ViewController.swift
   - AppDelegate.swift
   - SceneDelegate.swift
+  - DemoTest/ViewController.swift
+  - DemoTest/AppDelegate.swift
+  - DemoTest/SceneDelegate.swift
