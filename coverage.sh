@@ -16,5 +16,5 @@ git add .
 git commit -m "code coverage report"
 git push origin master
 
-bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r report-output-dir/cobertura.xml
+bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Swift --force-language -r report-output-dir/cobertura.xml
 
