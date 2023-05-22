@@ -1,6 +1,8 @@
 #!/bin/bash
 
-slather coverage -x --output-directory report-output-dir --scheme DemoTest --workspace DemoTest.xcworkspace DemoTest.xcodeproj
+rm -rf report-output-dir/cobertura.xml
+
+slather
 
 echo "Please provide Codacy token"
 read -s token
@@ -10,15 +12,12 @@ export CODACY_ORGANIZATION_PROVIDER=gh
 export CODACY_USERNAME=benjdum59
 export CODACY_PROJECT_NAME=DemoTest
 
-echo "token:" $token
-
 git add .
 git commit -m "code coverage report"
 git push origin master
 
-commit=`git rev-parse HEAD`
+commit=$(git rev-parse HEAD)
 
-echo "bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Swift --force-language -r report-output-dir/cobertura.xml --commit-uuid $commit"
 
 bash <(curl -Ls https://coverage.codacy.com/get.sh) report -l Swift --force-language -r report-output-dir/cobertura.xml --commit-uuid $commit
 

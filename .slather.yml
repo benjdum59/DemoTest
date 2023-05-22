@@ -1,0 +1,10 @@
+coverage_service: cobertura_xml
+xcodeproj: DemoTest.xcodeproj
+workspace: DemoTest.xcworkspace
+scheme: DemoTest
+source_directory: DemoTest
+output_directory: report-output-dir/cobertura.xml
+ignore:
+  - ViewController.swift
+  - AppDelegate.swift
+  - SceneDelegate.swift
