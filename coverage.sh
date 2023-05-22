@@ -12,5 +12,9 @@ export CODACY_PROJECT_NAME=DemoTest
 
 echo "token:" $token
 
+git add .
+git commit -m "code coverage report"
+git push origin master
+
 bash <(curl -Ls https://coverage.codacy.com/get.sh) report -r report-output-dir/cobertura.xml
 

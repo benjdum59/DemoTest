@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
-<coverage line-rate="0.6792452830188679" branch-rate="0.7619047619047619" lines-covered="108" lines-valid="159" branches-covered="64" branches-valid="84" complexity="0.0" timestamp="1684765866" version="Slather 2.7.4">
+<coverage line-rate="0.6792452830188679" branch-rate="0.7619047619047619" lines-covered="108" lines-valid="159" branches-covered="64" branches-valid="84" complexity="0.0" timestamp="1684766924" version="Slather 2.7.4">
   <sources>
     <source>/Users/benjamindumont/Development/Formation/DemoTest</source>
   </sources>
